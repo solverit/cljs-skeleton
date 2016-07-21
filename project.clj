@@ -1,17 +1,17 @@
 (defproject cljs-skeleton "0.1.0-SNAPSHOT"
   :dependencies [ 
-    [org.clojure/clojure        "1.7.0"]
-    [org.clojure/clojurescript  "1.7.189"]
-    [rum                        "0.6.0"]
+    [org.clojure/clojure        "1.8.0"]
+    [org.clojure/clojurescript  "1.9.89"]
+    [rum                        "0.10.4"]
     [http-kit                   "2.1.19"]
-    [compojure                  "1.4.0" :exclusions [commos-codec]]
+    [compojure                  "1.5.1" :exclusions [commos-codec]]
     [com.cognitect/transit-clj  "0.8.285"]
-    [com.cognitect/transit-cljs "0.8.232"]
+    [com.cognitect/transit-cljs "0.8.239"]
   ]
   
   :plugins [
-    [lein-cljsbuild "1.1.1"]
-    [lein-figwheel  "0.5.0-2"]
+    [lein-cljsbuild "1.1.3"]
+    [lein-figwheel  "0.5.4-7"]
   ]
   
   :aliases      { "package" ["do" 
@@ -25,7 +25,7 @@
   :main         skeleton.server
   :figwheel     { :ring-handler  "skeleton.server/app"
                   :css-dirs     ["resources/public"]
-                  :server-port   8080
+                  :server-port   7080
                   :repl          false }
   
   :cljsbuild {
